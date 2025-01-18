@@ -4,7 +4,7 @@ import 'screens/welcome_screen.dart';
 import 'screens/register_screen.dart';
 
 void main() {
-  runApp(LoanApp());
+  runApp(const LoanApp());
 }
 
 class LoanApp extends StatelessWidget {
@@ -18,7 +18,7 @@ class LoanApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       debugShowCheckedModeBanner: false,
-      home: OnboardingPages(),
+      home: const OnboardingPages(),
     );
   }
 }
@@ -46,7 +46,7 @@ class _OnboardingPagesState extends State<OnboardingPages> {
                 _isLastPage = index == 2;
               });
             },
-            children: [
+            children: const [
               WelcomePage1(),
               WelcomePage2(),
               WelcomePage3(),
@@ -61,37 +61,37 @@ class _OnboardingPagesState extends State<OnboardingPages> {
                 SmoothPageIndicator(
                   controller: _pageController,
                   count: 3, // Total pages
-                  effect: WormEffect(
+                  effect: const WormEffect(
                     dotColor: Colors.grey,
                     activeDotColor: Colors.blue,
                     dotHeight: 8,
                     dotWidth: 8,
                   ),
                 ),
-                SizedBox(height: 20),
+                const SizedBox(height: 20),
                 _isLastPage
                     ? ElevatedButton(
                   onPressed: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => RegisterPage()),
+                      MaterialPageRoute(builder: (context) => const RegisterPage()),
                     );
                   },
-                  child: Text('Get Started'),
                   style: ElevatedButton.styleFrom(
                     padding: const EdgeInsets.symmetric(horizontal: 40, vertical: 15),
                     backgroundColor: Colors.blue,
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(30),
                     ),
-                    textStyle: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                    textStyle: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                   ),
+                  child: const Text('Get Started'),
                 )
                     : TextButton(
                   onPressed: () {
                     _pageController.jumpToPage(2);
                   },
-                  child: Text(
+                  child: const Text(
                     'Skip',
                     style: TextStyle(color: Colors.blue, fontSize: 20),
                   ),

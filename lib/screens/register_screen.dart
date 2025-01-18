@@ -25,7 +25,7 @@ class RegisterPage extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
               // Logo or placeholder for branding
-              Center(
+              const Center(
                 child: Icon(
                   Icons.account_circle,
                   size: 100,
@@ -62,13 +62,13 @@ class RegisterPage extends StatelessWidget {
                 onPressed: () {
                   // Add your registration logic here
                 },
-                child: const Text('Register'),
                 style: ElevatedButton.styleFrom(
                   foregroundColor: Colors.white,
                   backgroundColor: Colors.black,  // White text
                   padding: const EdgeInsets.symmetric(vertical: 16),
                   textStyle: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
                 ),
+                child: const Text('Register'),
               ),
               const SizedBox(height: 16),
 

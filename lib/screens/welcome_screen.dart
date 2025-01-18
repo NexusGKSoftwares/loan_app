@@ -6,7 +6,7 @@ class WelcomePage1 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
         gradient: LinearGradient(
           colors: [Colors.blueAccent, Colors.greenAccent], // Gradient background
           begin: Alignment.topLeft,
@@ -16,7 +16,7 @@ class WelcomePage1 extends StatelessWidget {
       child: Column(
         children: [
           Container(
-            margin: EdgeInsets.only(top: 130),
+            margin: const EdgeInsets.only(top: 130),
             child: ClipRRect(
               borderRadius: BorderRadius.circular(20),
               child: Image.asset(
@@ -41,7 +41,7 @@ class WelcomePage1 extends StatelessWidget {
                       letterSpacing: 2.0,
                       shadows: [
                         Shadow(
-                          offset: Offset(2.0, 2.0),
+                          offset: const Offset(2.0, 2.0),
                           blurRadius: 5.0,
                           color: Colors.black.withOpacity(0.6),
                         ),
@@ -49,8 +49,8 @@ class WelcomePage1 extends StatelessWidget {
                     ),
                     textAlign: TextAlign.center,
                   ),
-                  SizedBox(height: 20),
-                  Text(
+                  const SizedBox(height: 20),
+                  const Text(
                     'Get easy access to loans with low interest rates and flexible repayment terms.',
                     style: TextStyle(
                       fontSize: 22,
@@ -77,7 +77,7 @@ class WelcomePage2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
         gradient: LinearGradient(
           colors: [Colors.blueAccent, Colors.greenAccent],
           begin: Alignment.topLeft,
@@ -87,7 +87,7 @@ class WelcomePage2 extends StatelessWidget {
       child: Column(
         children: [
           Container(
-            margin: EdgeInsets.only(top: 140),
+            margin: const EdgeInsets.only(top: 140),
             child: ClipRRect(
               borderRadius: BorderRadius.circular(20),
               child: Image.asset(
@@ -112,7 +112,7 @@ class WelcomePage2 extends StatelessWidget {
                       letterSpacing: 2.0,
                       shadows: [
                         Shadow(
-                          offset: Offset(2.0, 2.0),
+                          offset: const Offset(2.0, 2.0),
                           blurRadius: 5.0,
                           color: Colors.black.withOpacity(0.6),
                         ),
@@ -120,8 +120,8 @@ class WelcomePage2 extends StatelessWidget {
                     ),
                     textAlign: TextAlign.center,
                   ),
-                  SizedBox(height: 20),
-                  Text(
+                  const SizedBox(height: 20),
+                  const Text(
                     'Our services are available 24/7. Apply for a loan anytime, anywhere.',
                     style: TextStyle(
                       fontSize: 22,
@@ -148,7 +148,7 @@ class WelcomePage3 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
         gradient: LinearGradient(
           colors: [Colors.blueAccent, Colors.greenAccent],
           begin: Alignment.topLeft,
@@ -158,7 +158,7 @@ class WelcomePage3 extends StatelessWidget {
       child: Column(
         children: [
           Container(
-            margin: EdgeInsets.only(top: 150),
+            margin: const EdgeInsets.only(top: 150),
             child: ClipRRect(
               borderRadius: BorderRadius.circular(20),
               child: Image.asset(
@@ -182,7 +182,7 @@ class WelcomePage3 extends StatelessWidget {
                     letterSpacing: 2.0,
                     shadows: [
                       Shadow(
-                        offset: Offset(2.0, 2.0),
+                        offset: const Offset(2.0, 2.0),
                         blurRadius: 5.0,
                         color: Colors.black.withOpacity(0.6),
                       ),
@@ -190,8 +190,8 @@ class WelcomePage3 extends StatelessWidget {
                   ),
                   textAlign: TextAlign.center,
                 ),
-                SizedBox(height: 40),
-                Text(
+                const SizedBox(height: 40),
+                const Text(
                   'Sign up now to begin your journey with flexible loans at your fingertips.',
                   style: TextStyle(
                     fontSize: 22,
