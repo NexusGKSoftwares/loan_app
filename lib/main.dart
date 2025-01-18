@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
-import 'welcome_screen.dart';
-import 'register_screen.dart';
+import 'screens/welcome_screen.dart';
+import 'screens/register_screen.dart';
 
 void main() {
   runApp(LoanApp());
