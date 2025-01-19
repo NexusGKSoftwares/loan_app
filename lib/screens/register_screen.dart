@@ -77,7 +77,7 @@ class RegisterPage extends StatelessWidget {
               const SizedBox(height: 16),
 
               // Social Media Authentication Buttons with enhanced styles
-              _buildSocialAuthButton('Sign up with Google', 'assets/img_3.png', Colors.red),
+              _buildSocialAuthButton('Sign up with Google', 'assets/img_3.png', const Color.fromARGB(255, 241, 35, 21)),
               const SizedBox(height: 10),
               _buildSocialAuthButton('Sign up with Facebook', 'assets/img_4.png', Colors.blue),
               const SizedBox(height: 16),
