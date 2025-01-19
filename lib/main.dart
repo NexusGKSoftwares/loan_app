@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 import 'screens/welcome_screen.dart';
 import 'screens/register_screen.dart';
-import 'screens/login_screen.dart';
+// import 'screens/login_screen.dart';
 void main() {
   runApp(const LoanApp());
 }

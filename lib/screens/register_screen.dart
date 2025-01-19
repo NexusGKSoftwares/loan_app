@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'login_screen.dart'; // Import the LoginScreen
 
 class RegisterPage extends StatelessWidget {
   const RegisterPage({super.key});
@@ -25,7 +24,6 @@ class RegisterPage extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
-              // Logo or Placeholder
               const Center(
                 child: Icon(
                   Icons.account_circle,
@@ -34,8 +32,6 @@ class RegisterPage extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: 40),
-
-              // Text Fields
               _buildTextField(
                 label: 'Username',
                 icon: Icons.person,
@@ -57,11 +53,9 @@ class RegisterPage extends StatelessWidget {
                 keyboardType: TextInputType.text,
               ),
               const SizedBox(height: 32),
-
-              // Register Button
               ElevatedButton(
                 onPressed: () {
-                  // Add your registration logic here
+                  // Add registration logic here
                 },
                 style: ElevatedButton.styleFrom(
                   foregroundColor: Colors.white,
@@ -72,26 +66,20 @@ class RegisterPage extends StatelessWidget {
                 child: const Text('Register'),
               ),
               const SizedBox(height: 16),
-
-              // Login Navigation
+              const Center(child: Text("Or register with", style: TextStyle(color: Colors.black))),
+              const SizedBox(height: 16),
+              _buildSocialButtons(),
+              const SizedBox(height: 16),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   const Text(
                     'Already have an account? ',
-                    style: TextStyle(
-                      color: Colors.black,
-                    ),
+                    style: TextStyle(color: Colors.black),
                   ),
                   GestureDetector(
                     onTap: () {
-                      // Navigate to LoginScreen
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => const LoginScreen(),
-                        ),
-                      );
+                      // Navigate to Login page
                     },
                     child: const Text(
                       'Login',
@@ -133,6 +121,32 @@ class RegisterPage extends StatelessWidget {
         focusedBorder: const OutlineInputBorder(
           borderSide: BorderSide(color: Colors.black),
         ),
+      ),
+    );
+  }
+
+  Widget _buildSocialButtons() {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        _buildSocialButton(icon: Icons.facebook, label: 'Facebook', color: Colors.blue),
+        const SizedBox(width: 16),
+        _buildSocialButton(icon: Icons.g_mobiledata, label: 'Google', color: Colors.red),
+      ],
+    );
+  }
+
+  Widget _buildSocialButton({required IconData icon, required String label, required Color color}) {
+    return ElevatedButton.icon(
+      onPressed: () {
+        // Add social authentication logic here
+      },
+      icon: Icon(icon, color: Colors.white),
+      label: Text(label, style: const TextStyle(color: Colors.white)),
+      style: ElevatedButton.styleFrom(
+        backgroundColor: color,
+        padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+        textStyle: const TextStyle(fontSize: 14),
       ),
     );
   }
