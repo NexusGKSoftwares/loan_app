@@ -13,7 +13,7 @@ class LoanApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Loan App',
+      title: 'Bitmula',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
