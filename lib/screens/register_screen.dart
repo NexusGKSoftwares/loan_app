@@ -68,14 +68,18 @@ class RegisterPage extends StatelessWidget {
                   backgroundColor: Colors.black, // White text
                   padding: const EdgeInsets.symmetric(vertical: 16),
                   textStyle: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(12), // Rounded corners
+                  ),
                 ),
                 child: const Text('Register'),
               ),
               const SizedBox(height: 16),
 
-              // Social Media Authentication Buttons
-              _buildSocialAuthButton('Sign up with Google', Icons.login, Colors.red),
-              _buildSocialAuthButton('Sign up with Facebook', Icons.login, Colors.blue),
+              // Social Media Authentication Buttons with enhanced styles
+              _buildSocialAuthButton('Sign up with Google', 'assets/img_3.png', Colors.red),
+              const SizedBox(height: 10),
+              _buildSocialAuthButton('Sign up with Facebook', 'assets/img_4.png', Colors.blue),
               const SizedBox(height: 16),
 
               // Login Navigation
@@ -142,12 +146,16 @@ class RegisterPage extends StatelessWidget {
   }
 
   // Reusable Social Authentication Button
-  Widget _buildSocialAuthButton(String label, IconData icon, Color color) {
+  Widget _buildSocialAuthButton(String label, String iconPath, Color color) {
     return ElevatedButton.icon(
       onPressed: () {
         // Add social authentication logic here (Google/Facebook)
       },
-      icon: Icon(icon, color: Colors.white),
+      icon: Image.asset(
+        iconPath,
+        height: 24,
+        width: 24,
+      ),
       label: Text(
         label,
         style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
@@ -156,6 +164,10 @@ class RegisterPage extends StatelessWidget {
         backgroundColor: color, // Set button color based on platform
         padding: const EdgeInsets.symmetric(vertical: 16),
         textStyle: const TextStyle(fontSize: 16),
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(12), // Rounded corners
+        ),
+        elevation: 5, // Add shadow for a more modern feel
       ),
     );
   }
