@@ -33,7 +33,7 @@ class WelcomePage1 extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(
-                    'Welcome to NexusGK Loan App',
+                    'Welcome to Bitmula Loan App',
                     style: TextStyle(
                       fontSize: 50,
                       fontWeight: FontWeight.bold,
