@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'register_screen.dart'; // Import the RegisterPage
 
 class LoginScreen extends StatelessWidget {
   @override
@@ -111,7 +112,13 @@ class LoginScreen extends StatelessWidget {
                   ),
                   TextButton(
                     onPressed: () {
-                      // Navigate to Sign Up screen
+                      // Navigate to RegisterPage
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => RegisterPage(),
+                        ),
+                      );
                     },
                     child: Text(
                       'Sign Up',

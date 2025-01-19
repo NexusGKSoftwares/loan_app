@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'login_screen.dart'; // Import the LoginScreen
 
 class RegisterPage extends StatelessWidget {
   const RegisterPage({super.key});
@@ -6,35 +7,35 @@ class RegisterPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,  // Set the background color to white
+      backgroundColor: Colors.white,
       appBar: AppBar(
         title: const Text(
           'Register',
           style: TextStyle(
-            color: Colors.black,  // Black text for app bar
+            color: Colors.black,
           ),
         ),
-        backgroundColor: Colors.white,  // White app bar for consistency
-        elevation: 0,  // No shadow
+        backgroundColor: Colors.white,
+        elevation: 0,
       ),
       body: Padding(
-        padding: const EdgeInsets.all(16.0),  // Add padding around the screen
+        padding: const EdgeInsets.all(16.0),
         child: SingleChildScrollView(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
-              // Logo or placeholder for branding
+              // Logo or Placeholder
               const Center(
                 child: Icon(
                   Icons.account_circle,
                   size: 100,
-                  color: Colors.black,  // Black logo
+                  color: Colors.black,
                 ),
               ),
               const SizedBox(height: 40),
 
-              // Text Fields for username, email, and password
+              // Text Fields
               _buildTextField(
                 label: 'Username',
                 icon: Icons.person,
@@ -64,7 +65,7 @@ class RegisterPage extends StatelessWidget {
                 },
                 style: ElevatedButton.styleFrom(
                   foregroundColor: Colors.white,
-                  backgroundColor: Colors.black,  // White text
+                  backgroundColor: Colors.black,
                   padding: const EdgeInsets.symmetric(vertical: 16),
                   textStyle: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
                 ),
@@ -79,17 +80,23 @@ class RegisterPage extends StatelessWidget {
                   const Text(
                     'Already have an account? ',
                     style: TextStyle(
-                      color: Colors.black,  // Black text for prompt
+                      color: Colors.black,
                     ),
                   ),
                   GestureDetector(
                     onTap: () {
-                      // Navigate to Login page
+                      // Navigate to LoginScreen
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => LoginScreen(),
+                        ),
+                      );
                     },
                     child: const Text(
                       'Login',
                       style: TextStyle(
-                        color: Colors.black,  // Black text for 'Login'
+                        color: Colors.black,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
@@ -103,7 +110,6 @@ class RegisterPage extends StatelessWidget {
     );
   }
 
-  // Reusable method for text field widgets
   Widget _buildTextField({
     required String label,
     required IconData icon,
@@ -113,19 +119,19 @@ class RegisterPage extends StatelessWidget {
     return TextField(
       obscureText: obscureText,
       keyboardType: keyboardType,
-      style: const TextStyle(color: Colors.black, fontSize: 18),  // Increased font size
+      style: const TextStyle(color: Colors.black, fontSize: 18),
       decoration: InputDecoration(
         labelText: label,
-        labelStyle: const TextStyle(color: Colors.black, fontSize: 18),  // Increased label font size
-        prefixIcon: Icon(icon, color: Colors.black),  // Black icon
+        labelStyle: const TextStyle(color: Colors.black, fontSize: 18),
+        prefixIcon: Icon(icon, color: Colors.black),
         filled: true,
-        fillColor: Colors.black12,  // Light black background for text field
-        contentPadding: const EdgeInsets.symmetric(vertical: 18.0, horizontal: 12.0), // Increased padding
+        fillColor: Colors.black12,
+        contentPadding: const EdgeInsets.symmetric(vertical: 18.0, horizontal: 12.0),
         border: const OutlineInputBorder(
-          borderSide: BorderSide(color: Colors.black),  // Black border
+          borderSide: BorderSide(color: Colors.black),
         ),
         focusedBorder: const OutlineInputBorder(
-          borderSide: BorderSide(color: Colors.black),  // Black border on focus
+          borderSide: BorderSide(color: Colors.black),
         ),
       ),
     );
