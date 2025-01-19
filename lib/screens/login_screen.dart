@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class LoginScreen extends StatelessWidget {
-  const LoginScreen({super.key});
+class LoginPage extends StatelessWidget {
+  const LoginPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -83,6 +83,11 @@ class LoginScreen extends StatelessWidget {
               ),
               const SizedBox(height: 16),
 
+              // Social Media Authentication Buttons
+              _buildSocialAuthButton('Sign in with Google', Icons.login, Colors.red),
+              _buildSocialAuthButton('Sign in with Facebook', Icons.login, Colors.blue),
+              const SizedBox(height: 16),
+
               // Register Navigation
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -138,6 +143,25 @@ class LoginScreen extends StatelessWidget {
         focusedBorder: const OutlineInputBorder(
           borderSide: BorderSide(color: Colors.black), // Black border on focus
         ),
+      ),
+    );
+  }
+
+  // Reusable Social Authentication Button
+  Widget _buildSocialAuthButton(String label, IconData icon, Color color) {
+    return ElevatedButton.icon(
+      onPressed: () {
+        // Add social authentication logic here (Google/Facebook)
+      },
+      icon: Icon(icon, color: Colors.white),
+      label: Text(
+        label,
+        style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+      ),
+      style: ElevatedButton.styleFrom(
+        backgroundColor: color, // Set button color based on platform
+        padding: const EdgeInsets.symmetric(vertical: 16),
+        textStyle: const TextStyle(fontSize: 16),
       ),
     );
   }
