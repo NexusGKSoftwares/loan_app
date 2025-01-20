@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 import 'screens/welcome_screen.dart';
-import 'screens/register_screen.dart';
+// import 'screens/register_screen.dart';
 // import 'screens/login_screen.dart';
+import 'screens/dashboard_screen.dart';
 void main() {
   runApp(const LoanApp());
 }
@@ -74,7 +75,7 @@ class _OnboardingPagesState extends State<OnboardingPages> {
                   onPressed: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => const RegisterPage()),
+                      MaterialPageRoute(builder: (context) => const LoanDashboard()),
                     );
                   },
                   style: ElevatedButton.styleFrom(
