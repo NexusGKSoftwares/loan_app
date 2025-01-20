@@ -8,23 +8,45 @@ class LoanDashboard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Loan Dashboard'),
-        automaticallyImplyLeading: false, // Removes the back arrow
-        actions: [
-          IconButton(
-            icon: const Icon(Icons.notifications),
-            onPressed: () {
-              // Handle notifications
-            },
-          ),
-          IconButton(
-            icon: const Icon(Icons.account_circle),
-            onPressed: () {
-              // Navigate to profile
-            },
-          ),
-        ],
+      title: const Text(
+        'Loan Dashboard',
+        style: TextStyle(
+          color: Colors.white,
+          fontSize: 20,
+          fontWeight: FontWeight.bold,
+        ),
       ),
+      backgroundColor: Colors.black,
+      automaticallyImplyLeading: false, // Removes the back arrow
+      actions: [
+        IconButton(
+          icon: const Icon(
+            Icons.notifications_outlined,
+            color: Colors.white,
+          ),
+          onPressed: () {
+            // Handle notifications
+          },
+        ),
+        IconButton(
+          icon: const Icon(
+            Icons.account_circle_outlined,
+            color: Colors.white,
+          ),
+          onPressed: () {
+            // Navigate to profile
+          },
+        ),
+      ],
+      bottom: const PreferredSize(
+        preferredSize: Size.fromHeight(1.0),
+        child: Divider(
+          height: 1.0,
+          color: Colors.white24,
+        ),
+    ),
+    ),
+
       body: const SingleChildScrollView(
         padding: EdgeInsets.all(16.0),
         child: Column(
